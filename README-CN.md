@@ -5,16 +5,15 @@
 [English](README.md) | [中文](README-CN.md)
 
 
-| ------------ | :---------------------------------------------: |
-| Computer     |           Lenovo IdeaPad Y410P Laptop           |
-| CPU          | Intel Haswell Core i5-4200 /i7-4700MQ           |
-| Chipset      |           Lenovo (Intel HM86 Chipset)           |
-| Graphics     |          HD4600 (using Intel GPU only)          |
-| Audio        | ALC282 @ Intel Lynx Point High Definition Audio |
-| Ethernet     |        Atheros QCA8171 Gigabit Ethernet         |
-| WiFi         |          Broadcom BCM94352HMB 802.11AC          |
-| Bluetooth    |                 BCM20702 (4.0)                  |
-| BIOS Version |                      3.08                       |
+* | Computer:Lenovo IdeaPad Y410P Laptop
+* | CPU :Intel Haswell Core i5-4200M @ 2.50G/Intel Haswell Core i7-4700MQ @ 2.40G
+* | Chipset : Lenovo (Intel HM86 Chipset)
+* | Graphics :HD4600 (using Intel GPU only) 
+* | Audio:ALC282 @ Intel Lynx Point High Definition Audio
+* | Ethernet:Atheros QCA8171 Gigabit Ethernet
+* | WiFi:Broadcom BCM94352HMB 802.11AC (原装无解，更换) 
+* | Bluetooth:BCM20702 (4.0) (原装无解，更换)          
+* | BIOS Version:3.08   
 
 
 
