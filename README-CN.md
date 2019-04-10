@@ -21,8 +21,8 @@
 
 * 支持10.13.x 和 10.14。
 * ACPI补丁修复使用hotpatch方式，相关文件位于 `/CLOVER/ACPI/patched` 。
-* 远景论坛ID：39军小兵张 http://i.pcbeta.com/space-uid-4472739.html
-* 安装视频教程及效果展示：https://space.bilibili.com/414418614/video
+* 远景论坛ID：39军小兵张 [Link](http://i.pcbeta.com/space-uid-4472739.html)
+* 安装视频教程及效果展示：[Link](https://space.bilibili.com/414418614/video)
 * 有问题可加QQ群：686848381 验证答案：ALC282
 
 
