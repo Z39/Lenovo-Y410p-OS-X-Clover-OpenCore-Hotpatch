@@ -2,7 +2,7 @@
 
 Hackintosh your Y410P Notebook
 
-[English](README.md) | [中文](README-CN.md)
+[中文](README-CN.md)| [English](README.md) 
 
 * | Computer:Lenovo IdeaPad Y510P Laptop
 * | CPU :Intel Haswell Core i5-4200M @ 2.50G/Intel Haswell Core i7-4700MQ @ 2.40G

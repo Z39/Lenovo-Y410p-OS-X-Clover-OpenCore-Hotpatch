@@ -2,7 +2,7 @@
 
 让你的Y410P笔记本吃上黑苹果
 
-[English](README.md) | [中文](README-CN.md)
+[中文](README-CN.md)| [English](README.md) 
 
 
 * | Computer:Lenovo IdeaPad Y410P Laptop
