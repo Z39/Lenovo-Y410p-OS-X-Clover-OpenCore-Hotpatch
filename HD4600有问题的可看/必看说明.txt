@@ -1,0 +1,4 @@
+1.本方法为使用R大FakePCIID驱动HD4600和HDMI的老方法
+2.如遇到安装卡显卡（开V，问题出在显卡那），HDMI有问题的可使用
+3.本方法缺点是不能解决播放视频异常卡死的问题，需要再加上WhateverGreen.kext
+4.使用方法，aml替换进clover-acpi-patched,config.plist替换原来的，FakePCIID.kext放入clover-kexts-other
