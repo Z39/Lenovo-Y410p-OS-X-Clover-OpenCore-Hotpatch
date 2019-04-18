@@ -19,7 +19,7 @@ DefinitionBlock ("", "SSDT", 2, "Y410p", "UIAC-ALL", 0)
                         "UsbConnector", 255,
                         "port", Buffer() { 0x01, 0, 0, 0 },
                     },
-                    "HS02", Package()    // USB 2.0 near right
+                    "HS02", Package()    // USB 2.0 far right
                     {
                         "UsbConnector", 0,
                         "port", Buffer() { 0x02, 0, 0, 0 },
@@ -34,7 +34,7 @@ DefinitionBlock ("", "SSDT", 2, "Y410p", "UIAC-ALL", 0)
                         "UsbConnector", 255,
                         "port", Buffer() { 0x07, 0, 0, 0 },
                     },
-                    "HS10", Package()    // USB 2.0 far right
+                    "HS10", Package()    // USB 2.0 near right
                     {
                         "UsbConnector", 0,
                         "port", Buffer() { 0x10, 0, 0, 0 },
