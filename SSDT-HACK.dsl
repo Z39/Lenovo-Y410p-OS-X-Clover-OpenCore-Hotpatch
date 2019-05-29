@@ -4,7 +4,7 @@
 // Created by : z39
 // Credits : RehabMan
 
-DefinitionBlock("", "SSDT", 2, "Y410P", "_HACK", 0)
+DefinitionBlock("", "SSDT", 2, "Y430P", "_HACK", 0)
 {
     External(_SB.PCI0, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
@@ -164,6 +164,34 @@ DefinitionBlock("", "SSDT", 2, "Y410P", "_HACK", 0)
         }
     }
 
+// Automatic injection of HDAU properties
+    
+    External(_SB.PCI0.HDAU, DeviceObj)
+    
+    Method(_SB.PCI0.HDAU._DSM, 4)
+    {
+        If (!Arg2) { Return (Buffer() { 0x03 } ) }
+        Return (Package ()
+        {
+            "layout-id", Buffer() { 41, 0, 0, 0 },
+            "hda-gfx", Buffer() { "onboard-1" },
+        })
+    }
+    
+    // Automatic injection of HDEF properties
+
+    External(_SB.PCI0.HDEF, DeviceObj)
+    
+    Method(_SB.PCI0.HDEF._DSM, 4)
+    {
+        If (!Arg2) { Return (Buffer() { 0x03 } ) }
+        Return(Package()
+        {
+            "layout-id", Buffer() { 41, 0, 0, 0 },
+            "hda-gfx", Buffer() { "onboard-1" },
+            "PinConfigurations", Buffer() { },
+        })
+    }
 
 //
 // For disabling the discrete GPU
