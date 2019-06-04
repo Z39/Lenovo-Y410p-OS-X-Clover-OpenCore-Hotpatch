@@ -4,7 +4,7 @@
 // Created by : z39
 // Credits : RehabMan
 
-DefinitionBlock("", "SSDT", 2, "Y430P", "_HACK", 0)
+DefinitionBlock("", "SSDT", 2, "Y410P", "_HACK", 0)
 {
     External(_SB.PCI0, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
