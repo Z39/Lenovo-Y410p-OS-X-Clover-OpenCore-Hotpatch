@@ -14,6 +14,7 @@ Hackintosh your Y410P Notebook
 * | Bluetooth:BCM20702 (4.0) (after replacing the original card)            
 * | BIOS Version:3.08                 
 
+![Screen](10.15.JPG)
 ![Screen](Screen.JPG)  
 
 ## Features

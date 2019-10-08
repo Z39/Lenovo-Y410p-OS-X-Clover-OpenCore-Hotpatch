@@ -14,7 +14,9 @@
 * | Bluetooth:BCM20702 (4.0) (原装无解，更换)          
 * | BIOS Version:3.08   
 
- ![截图](Screen.JPG)   
+  ![截图](10.15.JPG)  
+  ![截图](Screen.JPG)
+   
 
 ## 支持列表
 
