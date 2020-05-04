@@ -11,7 +11,7 @@
 	<key>#WARNING - 4</key>
 	<string>Use SampleFull.plist for end of life models: 2011 and older.</string>
 	<key>#WARNING - 5</key>
-	<string>https://docs.google.com/spreadsheets/d/1kGFz3_kp5xCDRRQpfnIUOvbiHXTmxEgyx97u73ImXXE/edit#gid=0</string>
+	<string>https://github.com/acidanthera/MacInfoPkg/blob/master/DataBase.md</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -31,6 +31,14 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-BAT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-CpuPm.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -114,7 +122,36 @@
 			</dict>
 		</array>
 		<key>Block</key>
-		<array/>
+		<array>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string>Drop CpuPm</string>
+				<key>Enabled</key>
+				<false/>
+				<key>OemTableId</key>
+				<data>Q3B1UG0AAAA=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string>Drop Cpu0Ist</string>
+				<key>Enabled</key>
+				<false/>
+				<key>OemTableId</key>
+				<data>Q3B1MElzdAA=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+		</array>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -329,7 +366,7 @@
 				<key>Comment</key>
 				<string>change GFX0 to IGPU</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>20</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -420,7 +457,7 @@
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -530,12 +567,7 @@
 			</dict>
 		</dict>
 		<key>Block</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
-			<array>
-				<string>MaximumBootBeepVolume</string>
-			</array>
-		</dict>
+		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -1140,34 +1172,6 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string>__ZN8AppleRTC14updateChecksumEv</string>
-				<key>Comment</key>
-				<string>Disable RTC checksum update on poweroff</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data></data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleRTC</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>ww==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
 				<string>_AcpiOsVprintf</string>
 				<key>Comment</key>
 				<string>Disable ACPI logging</string>
@@ -1300,13 +1304,28 @@
 			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>Not signed for security reasons</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>Windows 10</string>
+				<key>Path</key>
+				<string>PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x5,0x0,0x0)/HD(1,GPT,A480E0A3-8AA3-4729-9A1C-C3EEE59D18AF,0x800,0x64000)/\EFI\Microsoft\Boot\Bootmgfw.efi</string>
+			</dict>
+		</array>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
-			<false/>
+			<true/>
 			<key>AuthRestart</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
@@ -1350,17 +1369,17 @@
 			</dict>
 			<dict>
 				<key>Arguments</key>
-				<string></string>
+				<string>Shutdown</string>
 				<key>Auxiliary</key>
-				<false/>
+				<true/>
 				<key>Comment</key>
-				<string>Clean NVRAM to reduce conflicts with other bootloaders</string>
+				<string>Perform shutdown</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Name</key>
-				<string>Clean NVRAM</string>
+				<string>Shutdown</string>
 				<key>Path</key>
-				<string>CleanNvram.efi</string>
+				<string>ResetSystem.efi</string>
 			</dict>
 		</array>
 	</dict>
@@ -1375,16 +1394,18 @@
 				<key>UIScale</key>
 				<data>AQ==</data>
 			</dict>
+			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+			<dict/>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-V dart=0 debug=0x100 keepsyms=1</string>
+				<string>-v dart=0 debug=0x100 keepsyms=1</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
-				<data>emgtSGFuczoyNTI=</data>
+				<data>emgtSGFudDotMTY4OTk=</data>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -1393,6 +1414,10 @@
 			<array>
 				<string>UIScale</string>
 				<string>DefaultBackgroundColor</string>
+			</array>
+			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+			<array>
+				<string>rtc-blacklist</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
@@ -1439,7 +1464,7 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02327404CDFJQWA8</string>
+			<string>C02511700J9FJQWA8</string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
@@ -1447,9 +1472,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro11,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02MT21KG86R</string>
+			<string>C02PFYZXG86R</string>
 			<key>SystemUUID</key>
-			<string>9BF1E904-DD55-4510-9808-4C4F05C074D4</string>
+			<string>9D2EF0C4-0301-4D7B-BBCC-1611C09C09CF</string>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
@@ -1460,11 +1485,11 @@
 			<key>BIOSVersion</key>
 			<string>159.0.0.0.0</string>
 			<key>BoardAssetTag</key>
-			<string></string>
+			<string>MacBook-Aluminum</string>
 			<key>BoardLocationInChassis</key>
 			<string>Part Component</string>
 			<key>BoardManufacturer</key>
-			<string></string>
+			<string>Apple Inc.</string>
 			<key>BoardProduct</key>
 			<string>Mac-3CBD00234E554E41</string>
 			<key>BoardSerialNumber</key>
@@ -1476,7 +1501,7 @@
 			<key>ChassisAssetTag</key>
 			<string>MacBook-Aluminum</string>
 			<key>ChassisManufacturer</key>
-			<string></string>
+			<string>Apple Inc.</string>
 			<key>ChassisSerialNumber</key>
 			<string>C02LJBD0FD56</string>
 			<key>ChassisType</key>
@@ -1496,7 +1521,7 @@
 			<key>SystemFamily</key>
 			<string>MacBook Pro</string>
 			<key>SystemManufacturer</key>
-			<string></string>
+			<string>Apple Inc.</string>
 			<key>SystemProductName</key>
 			<string>MacBookPro11,2</string>
 			<key>SystemSKUNumber</key>
@@ -1520,9 +1545,9 @@
 		<key>APFS</key>
 		<dict>
 			<key>EnableJumpstart</key>
-			<false/>
+			<true/>
 			<key>HideVerbose</key>
-			<false/>
+			<true/>
 			<key>JumpstartHotPlug</key>
 			<false/>
 			<key>MinDate</key>
@@ -1551,12 +1576,14 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>ApfsDriverLoader.efi</string>
-			<string>AppleImageLoader.efi</string>
 			<string>HiiDatabase.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>HFSPlus.efi</string>
+			<string>OpenUsbKbDxe.efi</string>
+			<string>Ps2KeyboardDxe.efi</string>
+			<string>Ps2MouseDxe.efi</string>
+			<string>UsbMouseDxe.efi</string>
+			<string>XhciDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -1598,9 +1625,9 @@
 			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>Resolution</key>
-			<string>1600x900</string>
+			<string>Max</string>
 			<key>SanitiseClearScreen</key>
-			<false/>
+			<true/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 		</dict>
@@ -1653,7 +1680,18 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Address</key>
+				<integer>268435456</integer>
+				<key>Comment</key>
+				<string>HD3000: IGPU memory corruption errata</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Size</key>
+				<integer>268435456</integer>
+			</dict>
+		</array>
 	</dict>
 </dict>
 </plist>
