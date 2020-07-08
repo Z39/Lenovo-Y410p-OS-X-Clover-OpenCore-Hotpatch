@@ -1,4 +1,4 @@
-# Lenovo IdeaPad Y410P NoteBook for macOS Catalina 10.15& macOS Mojave 10.14& High Sierra 10.13
+# Lenovo IdeaPad Y410P NoteBook for macOS Big Sur 11.0 &macOS Catalina 10.15& macOS Mojave 10.14& High Sierra 10.13
 
 Hackintosh your Y410P Notebook
 
@@ -14,12 +14,12 @@ Hackintosh your Y410P Notebook
 * | Bluetooth:BCM20702 (4.0) (after replacing the original card)            
 * | BIOS Version:3.08                 
 
-![Screen](10.15.JPG)
 ![Screen](Screen.JPG)  
+![Screen](Screen1.JPG)  
 
 ## Features
 
-* Support macOS Catalina 10.15& macOS Mojave 10.14& High Sierra 10.13
+* Support macOS Big Sur 11.0 &macOS Catalina 10.15& macOS Mojave 10.14& High Sierra 10.13
 * ACPI fixes use hotpatch; related files are located in `/CLOVER/ACPI/patched`.
 
 ## Releases
